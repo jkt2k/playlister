@@ -25,6 +25,7 @@ def playlists_index():
     """Show all playlists."""
     return render_template('playlists_index.html', playlists=playlists.find())
 
+@app.route('/playlists', methods=['POST'])
 def playlists_submit():
     """Submit a new playlist."""
     playlist = {
